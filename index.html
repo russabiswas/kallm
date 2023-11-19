@@ -29,9 +29,9 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#callforpapers">Call for Papers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Keynote Speakers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#organisers">Organising Committee</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Program">Program</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#speakers">Keynote Speakers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Organising Committee</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                    <!--     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
                     </ul>
@@ -123,7 +123,7 @@
         <section class="page-section" id="Program">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Entity Typing</h2>
+                    <h2 class="section-heading text-uppercase">Program</h2>
                   
                     <blockquote cite="#!">
                   Entity Typing in the task of predicting types of entities in a Knowledge Graph and it plays a vital role in Knowledge Graph construction and completion.
@@ -132,108 +132,28 @@
                     
                 </div>
                 
-                <button type="button" class="collapsible"><b>Embeddings of the Entity Names</b></button>
+                <button type="button" class="collapsible"><b>h1</b></button>
                     <div class="content">
                    
 
-                        <p> The embedding of the entity names are generated using  Neural Language Models (NLMs). To do so, pre-trained Word2Vec model on Google News dataset, GloVe model pre-trained on Wikipedia 2014 version and Gigaword 5, Wikipedia2Vec model pre-trained on English Wikipedia 2018 version, and pre-trained English character embeddings derived from GloVe 840B/300D dataset are used with a vector dimension of 300. The average of all word vectors in the entity names is taken as the vector representation of the entities. For BERT, the average of the last four hidden layers of the model is taken as a representation of the names of entities and the dimension used is 768.</p>
+                        <p> ttt</p>
                     </div>
                 
                 
-                <button type="button" class="collapsible"><b>Classification</b></button>
+                <button type="button" class="collapsible"><b>h2</b></button>
                     <div class="content">
                     <img src="img/classifier.jpg" alt="..." class="center">
 
-                        <p> Two classifiers have been built on top of the NLMs: <ol>
-                         <li>Fully Connected Neural Network (FCNN), and</li> 
-                            <li>Convolutional Neural Network (CNN).</li> </ol> 
-                            A three-layered FCNN model consisting of two dense layers with ReLU as an activation function has been used on the top of the vectors                             generated from the NLMs. The softmax function is used in the last layer to calculate the probability of the entities belonging to                                 different classes. The CNN model consists of two 1-D convolutional layers followed by a global max-pooling layer. ReLu is used as an                             activation function in the convolutional layers and the output of the pooling layer is then passed through a fully connected final                               layer, in which the softmax function predicts the classes of the entities.</p>
+                        <p> tttt</p>
                     </div>
             
-                <button type="button" class="collapsible"><b>Experiments</b></button>
+                <button type="button" class="collapsible"><b>h3</b></button>
                     <div class="content">    
                         <p>
-                            <b>Datasets</b> <br>
-                            The experiments are conducted on the benchmark dataset DBpedia630k extracted from DBpedia consisting of 7 non-overlapping classes with 560,000 train and 70,000 test entities. The classes are:
-                            <ol>
-                         <li>dbo: Person,</li> 
-                         <li>dbo: Organisation,</li>
-                         <li>dbo: MeansofTransportation,</li>
-                         <li>dbo: Place,</li> 
-                         <li>dbo: Animal,</li>
-                         <li>dbo: Plant, and</li>
-                         <li>dbo: Work.</li> </ol> 
-                         Furthermore, to evaluate the approaches independently of DBpedia, an additional test set composed of entities from CaLiGraph. It is a Wikipedia-based KG containing entities extracted from tables and enumerations in Wikipedia articles. It consists of 70,000 entities that are unknown to DBpedia and are evenly distributed among 7 aforementioned classes.
-                        </p>
-                        
-            <p><b>Results</b></p>
-                        
-                        
-            <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-kt03" rowspan="2"><b>Embedding Models</b></th>
-    <th class="tg-kt03" colspan="2"><b>Types in Labels</b></th>
-    <th class="tg-kt03" colspan="2"><b>No Types in Labels</b></th>
-    <th class="tg-kt03" colspan="2"><b>CaLiGraph Test set</b></th>
-  </tr>
-  <tr>
-    <td class="tg-kt03"><b>FCNN</b></td>
-    <td class="tg-kt03"><b>CNN</b></td>
-    <td class="tg-kt03"><b>FCNN</b></td>
-    <td class="tg-kt03"><b>CNN</b></td>
-    <td class="tg-kt03"><b>FCNN</b></td>
-    <td class="tg-kt03"><b>CNN</b></td>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-      <td class="tg-kt03"><b>Word2Vec</b></td>
-    <td class="tg-kt03">80.11</td>
-    <td class="tg-kt03">46.71</td>
-    <td class="tg-kt03">72.08</td>
-    <td class="tg-kt03">44.39</td>
-    <td class="tg-kt03">48.93</td>
-    <td class="tg-kt03">25.91</td>
-  </tr>
-  <tr>
-      <td class="tg-kt03"><b>GloVe</b></td>
-    <td class="tg-kt03">83.34</td>
-    <td class="tg-kt03">54.06</td>
-    <td class="tg-kt03">82.62</td>
-    <td class="tg-kt03">53.41</td>
-    <td class="tg-kt03">61.88</td>
-    <td class="tg-kt03">31.3</td>
-  </tr>
-  <tr>
-      <td class="tg-kt03"><b>Wikipedia2Vec</b></td>
-    <td class="tg-kt03"><b>91.14</b></td>
-    <td class="tg-kt03">60.47</td>
-    <td class="tg-kt03"><b>90.68</b></td>
-    <td class="tg-kt03">57.36</td>
-    <td class="tg-kt03"><b>75.21</b></td>
-    <td class="tg-kt03">36.97</td>
-  </tr>
-  <tr>
-      <td class="tg-kt03"><b>BERT</b></td>
-    <td class="tg-kt03">67.37</td>
-    <td class="tg-kt03"><b>62.27</b></td>
-    <td class="tg-kt03">64.63</td>
-    <td class="tg-kt03"><b>60.4</b></td>
-    <td class="tg-kt03">53.42</td>
-    <td class="tg-kt03">35.55</td>
-  </tr>
-  <tr>
-      <td class="tg-kt03"><b>Character Embedding</b></td>
-    <td class="tg-kt03">73.43</td>
-    <td class="tg-kt03">58.13</td>
-    <td class="tg-kt03">72.66</td>
-    <td class="tg-kt03">58.3</td>
-    <td class="tg-kt03">54.91</td>
-    <td class="tg-kt03"><b>45.73</b></td>
-  </tr>
-</tbody>
-</table>
+                            ttt</p>
+                    
+ 
+
  </div>
             
             
@@ -242,7 +162,7 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h2 class="section-heading text-uppercase">Organising Committee</h2>
             <!--        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
                 </div>
                 <div class="row">
@@ -292,7 +212,7 @@
                         </div>
                                 <div class="col-lg-4">
                                 <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="img/gerard" alt="..." />
+                            <img class="mx-auto rounded-circle" src="img/gerard.jpg" alt="..." />
                             <h4>Gerard de Melo</h4>
                             <p class="text-muted">University of Potsdam, Hasso Plattner Institute, Germany</p>
                             <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -304,24 +224,7 @@
             </div>
             </div>
         </section>
-        <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">How to cite the paper</h2>
-                     <div class="how-to-cite">
-                     <p> @inproceedings{biswas2021judge, <br>
-                    title={Do Judge an Entity by its Name! Entity Typing using Language Models}, <br>
-                    author={Biswas, Russa and Sofronova, Radina and Alam, Mehwish and Heist, Nicolas and Paulheim, Heiko and Sack, Harald}, <br>
-                    booktitle={18th Extended Semantic Web Conference (ESWC), Poster and Demo Track}, <br>
-                    year={2021}, <br>
-                    organization={Springer}}
-            </p>
-            <!--        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                </div>
-                 </div>
-                </div>
-                </section>
-
+        
 
       
         <!-- Clients-->
@@ -339,7 +242,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div>
-                       <p> Copyright &copy; This website is maintained by Russa Biswas. For further questions, please contact <a href = "mailto: russa.biswas@fiz-karlsruhe.de">Email</a> 
+                       <p> Copyright &copy; This website is maintained by Russa Biswas. For further questions, please contact <a href = "mailto: russa.biswas@hpi.de">Email</a> 
                         
                         <!-- This script automatically adds the current year to your website footer-->
                         <!-- (credit: https://updateyourfooter.com/)-->
