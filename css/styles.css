@@ -11255,6 +11255,25 @@ header.masthead .masthead-heading {
   height: 2.75rem;
 }
 
+    .countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      background-color: #FF8C00	;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .countdown span {
+      margin: 0 10px;
+      padding: 10px;
+      
+      border-radius: 5px;
+    }
+
 section#contact {
   background-color: #212529;
   background-image: url("../assets/img/map-image.png");
