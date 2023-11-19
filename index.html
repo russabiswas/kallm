@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Workshop on Knowledge Graph and Large Language Models (KaLLM)</title>
@@ -29,6 +29,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#callforpapers">Call for Papers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dates">Important Dates</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Program">Program</a></li>
                         <li class="nav-item"><a class="nav-link" href="#speakers">Keynote Speakers</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Organising Committee</a></li>
@@ -42,8 +43,43 @@
        
             <div class="container">
                
-                 <img src="img/intro.jpg" alt="..." class="coverpic">
+                 <img src="img/intro.jpg" class="coverpic">
         <!--        <a class="btn btn-primary btn-xl text-uppercase" href="#home">Home</a> -->
+
+<div id="countdown"></div>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("May 20, 2024 00:00:00").getTime();
+
+  // Update the countdown every 1 second
+  var x = setInterval(function() {
+    // Get the current date and time
+    var now = new Date().getTime();
+
+    // Calculate the remaining time
+    var distance = countDownDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the countdown in the element with id="countdown"
+    document.getElementById("countdown").innerHTML =
+      "<span>" + days + "</span> Days " +
+      "<span>" + hours + "</span> Hrs " +
+      "<span>" + minutes + "</span> Mins " +
+      "<span>" + seconds + "</span> Secs ";
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>       
             </div>
        
         
@@ -58,13 +94,19 @@
             </div>
         </header>-->
         <!-- Home-->
-        <section class="page-section" id="Home">
+        <section class="page-section" id="home">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase"></h2>
-                     <img src="img/motive.jpg" alt="..." class="center">
+                   </div> 
+         <div>           
+                <p>   In recent years, Large Language Models (LLMs) have revolutionized the field of Natural Language Processing (NLP) by improving contextual understanding, zero-shot and few-shot learning, text generation, and question answering. However, LLMs have limitations such as accuracy, bias, interpretability, and context. They often produce factually inaccurate information, struggle to understand complex contexts, and may unintentionally produce biased or stereotyped information. KGs, on the other hand, have high-quality explicit knowledge, symbolic reasoning potential, and the ability to evolve with new knowledge, making them essential for various applications. The intersection of LLMs and KGs has sparked significant interest and innovation in NLP. LLM-enhanced KGs can be introduced into pre-training and inference stages to provide external knowledge and assess interpretability. LLM-augmented KGs are designed to improve coverage and ease the use of KGs in various tasks, including embedding learning, completion, construction, KG-to-text generation, and KGQA. Combining the benefits of LLMs and KGs can also improve performance in knowledge representation. </p>
                     
-                <p>    text1    </p>           
+                    
+           <p>  Our workshop intends to provide a platform for researchers, practitioners, and industry professionals to explore the synergies between LLMs and KGs. 
+We aim to provide a space for the LLM community and the community of KG researchers to interact and explore how these two communities could collaborate and support one another. 
+The goal of the workshop is to seize on the tremendous opportunities arising from investigating cutting-edge approaches, addressing challenges and limitations, and applications in different domains.
+    </p>           
               
                 </div>
                 </div>
@@ -76,10 +118,28 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Call for Papers</h2>
               <!--        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                   
-                    <p>text2</p>
+                   </div> 
+     <div>           
+                    <p>The interaction between LLMs and KGs and how it affects the development of NLP tasks should be the focus of submissions.
+The workshop will cover a diverse range of topics related to the integration of LLMs and KGs, including but not limited to: </p>
+                     
+ <p> 
+    <ul>
+  <li>Knowledge-enhanced language generation</li>
+  <li>KG-based question answering using LLMs</li>
+  <li>Fact validation and bias mitigation</li>
+    <li> KG creation and completion using LLMs</li>
+    <li>Privacy considerations in LLM-KG integration</li>
+    <li>Interpretability and explainability</li>
+    <li>Cross-domain applications </li>
+    <li> KG-based text summarization with LLMs</li>
+    <li> Ethical implications of LLM-KG technologies</li>
+    <li> Multimodality of KGs and LLMs </li>
+    <li> Multilingual LLMs for KGs and vice-versa </li>
+</ul>
+ </p>
         
-                    <button type="button" class="collapsible"><b>heading1</b></button>
+           <!--           <button type="button" class="collapsible"><b>heading1</b></button>
                     <div class="content">
                   
 
@@ -97,25 +157,25 @@
                         </p>
                     </div>
                     <button type="button" class="collapsible"><b>heading3</b></button>
-                    <div class="content">
+                    <div class="content"> -->
                    <!--      <img src="img/wiki2vec.jpg" alt="..." class="center"> -->
                                          
-                        <p> text5                 
+                  <!--        <p> text5                 
                         
                         
                         
                         </p>
                     </div>
                     <button type="button" class="collapsible"><b>heading 4</b></button>
-                    <div class="content">
+                    <div class="content"> -->
                   <!--       <img src="img/bert.jpg" alt="..." class="center"> -->
-                        <p> text6                                    
+                 <!--        <p> text6                                    
                         </p>  </div>
                     <button type="button" class="collapsible"><b>heading 5</b></button>
-                    <div class="content">
+                    <div class="content"> -->
                  <!--     <img src="img/charembed.jpg" alt="..." class="center"> -->
-                    <p> text7</p>
-                    </div>          
+ </div>
+                             
                 </div>
             
         </section>
@@ -125,9 +185,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Program</h2>
                   
-                    <blockquote cite="#!">
-                  Entity Typing in the task of predicting types of entities in a Knowledge Graph and it plays a vital role in Knowledge Graph construction and completion.
-                   </blockquote>
+                   
                     
                     
                 </div>
@@ -156,13 +214,15 @@
 
  </div>
            </section>
-        <!-- Team-->
+        <!-- Speakers -->
         <section class="page-section bg-light" id="speakers">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Keynote Speakers and Panellists</h2>
+                       <p> To be announced soon...</p>
+                    
             <!--        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                </div>
+            <!--     </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
@@ -218,9 +278,9 @@
                          </div>
                     
                         </div>
-                    </div>
+                    </div> -->
             </div>
-            </div>
+            </div> 
         </section>
         
  
