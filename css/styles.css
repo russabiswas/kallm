@@ -11337,9 +11337,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 .fill {
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-width: 1200px;
     height: 100%;
 }
 .fill img {
-  min-height: 100vh;
+  min-width: 1200px;
 }
